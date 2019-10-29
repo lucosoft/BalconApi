@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.camel:camel-dataformat:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-dataformat/3.0.0-SNAPSHOT/camel-dataformat-3.0.0-20191028.191410-629.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-dataformat/3.0.0-SNAPSHOT/camel-dataformat-3.0.0-20191028.191410-629-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-dataformat/3.0.0-SNAPSHOT/camel-dataformat-3.0.0-20191028.191410-629-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

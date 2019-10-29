@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.camel:camel-management-api:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-management-api/3.0.0-SNAPSHOT/camel-management-api-3.0.0-20191028.191105-707.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-management-api/3.0.0-SNAPSHOT/camel-management-api-3.0.0-20191028.191105-707-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-management-api/3.0.0-SNAPSHOT/camel-management-api-3.0.0-20191028.191105-707-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

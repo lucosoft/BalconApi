@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.camel:camel-activemq:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-activemq/3.0.0-SNAPSHOT/camel-activemq-3.0.0-20191028.193607-580.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-activemq/3.0.0-SNAPSHOT/camel-activemq-3.0.0-20191028.193607-580-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-activemq/3.0.0-SNAPSHOT/camel-activemq-3.0.0-20191028.193607-580-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

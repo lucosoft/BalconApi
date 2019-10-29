@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.camel:camel-test-spring:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test-spring/3.0.0-SNAPSHOT/camel-test-spring-3.0.0-20191028.192233-696.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test-spring/3.0.0-SNAPSHOT/camel-test-spring-3.0.0-20191028.192233-696-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test-spring/3.0.0-SNAPSHOT/camel-test-spring-3.0.0-20191028.192233-696-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

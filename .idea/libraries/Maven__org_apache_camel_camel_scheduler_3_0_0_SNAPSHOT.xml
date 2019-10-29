@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.camel:camel-scheduler:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-scheduler/3.0.0-SNAPSHOT/camel-scheduler-3.0.0-20191028.191653-626.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-scheduler/3.0.0-SNAPSHOT/camel-scheduler-3.0.0-20191028.191653-626-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-scheduler/3.0.0-SNAPSHOT/camel-scheduler-3.0.0-20191028.191653-626-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
