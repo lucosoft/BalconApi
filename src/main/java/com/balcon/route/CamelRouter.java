@@ -1,5 +1,10 @@
 package com.balcon.route;
 
+import com.balcon.model.ModbusDTO;
+import com.balcon.service.CamelService;
+import com.balcon.service.CamelServiceImpl;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.apache.commons.io.IOUtils;
@@ -16,6 +21,10 @@ public class CamelRouter extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
+        final ModbusDTO modbusDTO = new ModbusDTO();
+
+        final CamelServiceImpl camelServiceImpl = new CamelServiceImpl();
+
         String apiDescription = null;
         try {
             InputStream fileStream = this.getClass().getResourceAsStream("/static/api-description.html");
@@ -26,7 +35,7 @@ public class CamelRouter extends RouteBuilder {
 
         restConfiguration()
                 .apiContextPath("api-doc")
-                .apiProperty("api.title", "demo20171204")
+                .apiProperty("api.title", "balcon-api")
                 .apiProperty("api.description", apiDescription)
                 .apiProperty("api.version", "0.0.1-SNAPSHOT")
                 .apiProperty("cors", "true")
@@ -36,14 +45,6 @@ public class CamelRouter extends RouteBuilder {
             .component("servlet")
             .bindingMode(RestBindingMode.json)
             .skipBindingOnErrorCode(false);
-
-        rest().produces("text/plain")
-                .get("/geocod")
-                .to("direct:geocod");
-
-        from("direct:geocod")
-                .to("geocoder:address:current")
-                .transform().simple("Hello from Spring Boot and Camel. We are at: ${body}");
 
         rest().produces("text/plain")
                 .get("/echo")
@@ -61,7 +62,39 @@ public class CamelRouter extends RouteBuilder {
                 .streamCaching()
                 .to("bean:CamelService?method=getData");
 
+        rest().description("getModbusDataDesc")
+                .get("/modbusData")
+                .to("direct:modbusData");
+
+        from("direct:modbusData")
+                .streamCaching()
+                .to("bean:CamelService?method=getModbusData");
+
         from("activemq:ExampleQueue")
-                .to("log:sample");
+//                .to("log:sample");
+//                .split(xpath("/string"))
+//                .split(body().tokenizePair("<string>", "</string>")).streaming()
+                .to("bean:CamelService?method=procModbusData");
+
+//        from("activemq:ExampleQueue").process(new Processor() {
+//            public void process(Exchange exchange) throws Exception {
+//                camelServiceImpl.procModbusData(exchange.getIn().getBody().toString());
+////                modbusDTO.setDatos(exchange.getIn().getBody().toString());
+//                System.out.println("procModbusData"
+////                        + exchange.getIn().getBody());
+////                        + modbusDTO.getDatos()
+//                );
+//            }
+//        });
+
+//
+//        from("activemq:ExampleQueue").process(new Processor() {
+//            public void process(Exchange exchange) throws Exception {
+//                modbusDTO.setDatos(exchange.getIn().getBody().toString());
+//                System.out.println("Modbus received: "
+////                        + exchange.getIn().getBody());
+//                        + modbusDTO.getDatos());
+//            }
+//        });
     }
 }

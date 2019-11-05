@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "a075f695-fe18-4a24-8dbb-997551845e86",
+		"name": "balcon-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "camel data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/camel/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"camel",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "camel echo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/camel/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"camel",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modbusData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/camel/modbusData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"camel",
+						"modbusData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

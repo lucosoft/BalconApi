@@ -83,12 +83,6 @@
     <orderEntry type="library" name="Maven: org.apache.camel:camel-spring-boot:2.24.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-spring:2.24.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-core-starter:2.24.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-geocoder-starter:2.24.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-geocoder:2.24.2" level="project" />
-    <orderEntry type="library" name="Maven: com.google.maps:google-maps-services:0.2.9" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
-    <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp:3.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.14.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-servlet-starter:2.24.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-servlet:2.24.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-http-common:2.24.2" level="project" />
