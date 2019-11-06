@@ -2,13 +2,28 @@ package com.balcon.model;
 
 public class ModbusDTO {
 
-    private String datos = new String();
+    private String id = new String();
 
-    public String getDatos() {
-        return datos;
+    private String value = new String();
+
+    public ModbusDTO(String id, String value) {
+        this.id = id;
+        this.value = value;
     }
 
-    public void setDatos(String datos) {
-        this.datos = datos;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 }

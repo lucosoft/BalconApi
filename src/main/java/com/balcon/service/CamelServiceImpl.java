@@ -5,8 +5,8 @@ import com.balcon.model.ModbusDTO;
 import org.apache.camel.Exchange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.HashMap;
+import java.util.List;
 
 @Service("CamelService")
 public class CamelServiceImpl implements CamelService {
@@ -25,14 +25,13 @@ public class CamelServiceImpl implements CamelService {
         }};
     }
 
-    public String getModbusData() {
+    public List<ModbusDTO> getModbusData() {
         return modbusResponseMapper.mapTo();
     }
 
-    public void procModbusData(Exchange exchange) {
+    public List<ModbusDTO> procModbusData(Exchange exchange) {
         String responseData = (String) exchange.getIn().getBody();
-        modbusResponseMapper.mapFrom(responseData);
-        System.out.println("procData: " + responseData
-        );
+        System.out.println("procData: " + responseData);
+        return modbusResponseMapper.mapFrom(responseData);
     }
 }

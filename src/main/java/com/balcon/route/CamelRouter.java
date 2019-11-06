@@ -1,10 +1,6 @@
 package com.balcon.route;
 
-import com.balcon.model.ModbusDTO;
-import com.balcon.service.CamelService;
 import com.balcon.service.CamelServiceImpl;
-import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.apache.commons.io.IOUtils;
@@ -20,10 +16,6 @@ public class CamelRouter extends RouteBuilder {
     private String baseUri;
     @Override
     public void configure() throws Exception {
-
-        final ModbusDTO modbusDTO = new ModbusDTO();
-
-        final CamelServiceImpl camelServiceImpl = new CamelServiceImpl();
 
         String apiDescription = null;
         try {
@@ -64,37 +56,14 @@ public class CamelRouter extends RouteBuilder {
 
         rest().description("getModbusDataDesc")
                 .get("/modbusData")
-                .to("direct:modbusData");
+                .to("direct:modbusData")
+                .enableCORS(true);
 
         from("direct:modbusData")
                 .streamCaching()
                 .to("bean:CamelService?method=getModbusData");
 
         from("activemq:ExampleQueue")
-//                .to("log:sample");
-//                .split(xpath("/string"))
-//                .split(body().tokenizePair("<string>", "</string>")).streaming()
                 .to("bean:CamelService?method=procModbusData");
-
-//        from("activemq:ExampleQueue").process(new Processor() {
-//            public void process(Exchange exchange) throws Exception {
-//                camelServiceImpl.procModbusData(exchange.getIn().getBody().toString());
-////                modbusDTO.setDatos(exchange.getIn().getBody().toString());
-//                System.out.println("procModbusData"
-////                        + exchange.getIn().getBody());
-////                        + modbusDTO.getDatos()
-//                );
-//            }
-//        });
-
-//
-//        from("activemq:ExampleQueue").process(new Processor() {
-//            public void process(Exchange exchange) throws Exception {
-//                modbusDTO.setDatos(exchange.getIn().getBody().toString());
-//                System.out.println("Modbus received: "
-////                        + exchange.getIn().getBody());
-//                        + modbusDTO.getDatos());
-//            }
-//        });
     }
 }
